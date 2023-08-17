@@ -9,11 +9,12 @@
  */
 int _isupper(int c)
 {
-	char c;
-
-	c = 'A';
-	_isupper("%c:\n", c);
-	c = 'a';
-	_isupper("%c:\n", c);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
