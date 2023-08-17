@@ -1,9 +1,10 @@
-#include "main.h"
-/*
- * main - the main function
+#include <stdio.h>
+/**
+ * main - main function
  * Return: always 0
  */
 int main(void)
 {
-	_putchar("_putchar\n");
+	printf("_putchar\n");
+	return (0);
 }
