@@ -1,17 +1,28 @@
 #include "main.h"
 /**
- * print_line - main function
+ * print_diagonal - main function
  * @n: int variable
  * _putchar: to standard output
  */
 void print_diagonal(int n)
 {
-	int line;
+	int li, ch;
 
-	if (n > 0)
+	li = 0;
+
+	while (n > 0)
 	{
-		for (line = 0; line < n; line++)
-			_putchar('\\');
+		ch = li;
+		while (ch > 0)
+		{
+			_putchar(' ');
+			ch--;
+		}
+		_putchar('\\');
+		_putchar('\n');
+		li++;
+		n--;
 	}
-	_putchar('\n');
+	if (li < 1)
+		_putchar('\n');
 }
