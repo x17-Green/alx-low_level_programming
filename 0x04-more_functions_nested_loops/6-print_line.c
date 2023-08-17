@@ -1,23 +1,17 @@
 #include "main.h"
 /**
- *
- *
- *
+ * print_line - main function
+ * @n: int variable
+ * _putchar: to standard output
  */
 void print_line(int n)
 {
-	if (n <= 2)
-		n++;
+	int line;
+
+	if (n > 0)
 	{
-		_putchar('_');
+		for (line = 0; line < n; line++)
+			_putchar('_');
 	}
-	else if (n <= 10)
-		n++;
-	{
-		_putchar('_');
-	}
-	else
-	{
-		_putchar('\n');
-	}
+	_putchar('\n');
 }
