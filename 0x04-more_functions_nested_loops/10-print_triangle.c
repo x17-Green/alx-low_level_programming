@@ -1,31 +1,34 @@
 #include "main.h"
-/*
- * print_tringle - prints triangle function
- * @size: number of sizes of triangle
- *
+/**
+ * print_triangle - Prints a triangle, using the character #
+ * @size: number of sizes
+ * Return: always 0
  */
 void print_triangle(int size)
 {
-	int ln, tr;
+	int lines, trian;
 
 	if (size > 0)
 	{
-		for (ln = 1; ln <= size; ln++)
+		for (lines = 1; lines <= size; lines++)
 		{
-			for (tr = size - ln; tr > 0; tr--)
+			for (trian = 1; trian <= size; trian++)
 			{
-				_putchar(' ');
-			}
-			for (tr = 0; tr < size; tr++)
-			{
-				_putchar('#');
-			}
-			if (ln == size)
-			{
-				continue;
+				if (trian >= size - (lines - 1))
+				{
+					_putchar('#');
+				}
+				else
+				{
+					_putchar(' ');
+				}
 			}
 			_putchar('\n');
 		}
+
 	}
-	_putchar('\n');
+	else if (size <= 0)
+	{
+		_putchar('\n');
+	}
 }
