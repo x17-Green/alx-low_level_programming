@@ -1,18 +1,5 @@
 # C - More functions, more nested loops
 0-isupper.c
-1-isdigit.c
-2-main.c
-3-main.c
-4-main.c
-5-main.c
-6-main.c
-7-main.c
-8-main.c
-9-fizz_buzz.c
-10-main.c
-100-prime_factor.c
-101-main.c
-0-isupper.c
 main.h
 _putchar.c
 README.md
