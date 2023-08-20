@@ -1,5 +1,2 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-
-
-#endif
+void print_alphabet(void);
+int _putchar(char c);
