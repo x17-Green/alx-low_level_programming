@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * leet - function to encode a character to 1337
- * @r: a string to replace characters
- * Return: encoded `r` string
+ * @s: a string to replace characters
+ * Return: encoded `s` string
  */
 char *leet(char *s)
 {

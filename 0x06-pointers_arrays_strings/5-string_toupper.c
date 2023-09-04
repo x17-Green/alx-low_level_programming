@@ -10,7 +10,7 @@ char *string_toupper(char *c)
 
 	for (num = 0; c[num] != '\0'; num++)
 	{
-		if (c[num] > 98 && c[num] < 123)
+		if (c[num] > 96 && c[num] < 123)
 		{
 			c[num] -= 32;
 		}
