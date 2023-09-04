@@ -2,7 +2,8 @@
 /**
  * _strncat - main function for concatenate
  * @dest: char pointer string variable
- * @sr: another char pointer string variable
+ * @src: another char pointer string variable
+ * @n: int variable in a pointer function
  * Return: runtun pointer dest
  */
 char *_strncat(char *dest, char *src, int n)
