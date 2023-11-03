@@ -13,7 +13,6 @@ void *malloc_checked(unsigned int b)
 
 	if (mem == NULL)
 	{
-		perror("Failed to allocate memory");
 		exit(98);
 	}
 	return (mem);
