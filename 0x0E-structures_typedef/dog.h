@@ -1,9 +1,5 @@
 #ifndef STRUCT_DOG
 #define STRUCT_DOG
-
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * struct dog - Dog structure
  * @name: Name category
