@@ -12,24 +12,21 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *cutie_dog = NULL;
 
-	new_dog = (dog_t *)malloc(sizeof(dog_t));
+	if (name != NULL && owner != NULL)
+	{
+		cutie_dog = malloc(sizeof(dog_t));
 
-	if (!new_dog)
-	{
-		printf("Error, cannot allocate memory\n");
-		return (NULL);
+		if (cutie_dog == NULL)
+		{
+			return (NULL);
+		}
+
+		cutie_dog->name = strdup(name);
+		cutie_dog->owner = strdup(owner);
+		cutie_dog->age = age;
 	}
-	new_dog->name = strdup(name);
-	new_dog->age = age;
-	new_dog->owner = strdup(owner);
-	if (new_dog->name == NULL || new_dog->owner == NULL)
-	{
-		free(new_dog->name);
-		free(new_dog->owner);
-		free(new_dog);
-		return (NULL);
-	}
-	return (new_dog);
+
+	return (cutie_dog);
 }
