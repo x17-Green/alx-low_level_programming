@@ -1,28 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "calc.h"
-
+#include "3-calc.h"
+/**
+ * main - Function that performs simple operations
+ * @argc: Argument count
+ * @argv: Argument vector string
+ *
+ * Return: always 0
+ */
 int main(int argc, char *argv[])
 {
+	int a, b, result;
+	int (*op_func)(int, int);
+
 	if (argc != 4)
 	{
-		printf(stderr, "Error\n");
-		return 1;
+		printf("Error\n");
+		return (1);
 	}
 
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
-	int int (*op_func)(int, int) = get_op_func(argv[2]);
+	op_func = get_op_func(argv[2]);
 
-	if (op_func == NULL)
+	if (!op_func)
 	{
-		printf(stderr, "Error: Unsupported operator\n");
-		return 1;
+		printf("Error: Unsupported operator\n");
+		exit(98);
 	}
 
-	int result = op_func(a, b);
+	result = op_func(a, b);
 	printf("%d\n", result);
 
-	return 0;
+	return (0);
 }

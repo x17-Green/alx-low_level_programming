@@ -7,7 +7,7 @@
 /**
  * struct op - operator structure
  *
- * @op - Operator
+ * @op: Operator
  * @f: Associated function
  */
 typedef struct op
@@ -16,6 +16,7 @@ typedef struct op
 	int (*f)(int a, int b);
 
 } op_t;
+typedef int (*operation)(int, int);
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
